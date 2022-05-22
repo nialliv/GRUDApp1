@@ -1,5 +1,6 @@
 package ru.kit.springcourse.dao;
 
+import java.security.PublicKey;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -32,5 +33,14 @@ public class PersonDAO {
 	public void save(Person person) {
 		person.setId(++PEOPLE_COUNT);
 		people.add(person);
+	}
+	
+	public void update(int id, Person person) {
+		Person personToBeUpdated = show(id);
+		personToBeUpdated.setName(person.getName());
+	}
+	
+	public void delete(int id) {
+		people.removeIf(p -> p.getId() == id);
 	}
 }
