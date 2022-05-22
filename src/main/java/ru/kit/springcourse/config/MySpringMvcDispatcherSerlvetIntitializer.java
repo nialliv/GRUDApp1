@@ -2,7 +2,6 @@ package ru.kit.springcourse.config;
 
 import javax.servlet.ServletContext;
 import javax.servlet.ServletException;
-import javax.sql.rowset.serial.SerialException;
 
 import org.springframework.web.filter.HiddenHttpMethodFilter;
 import org.springframework.web.servlet.support.AbstractAnnotationConfigDispatcherServletInitializer;
